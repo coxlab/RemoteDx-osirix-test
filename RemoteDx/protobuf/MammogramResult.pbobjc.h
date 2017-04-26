@@ -29,23 +29,23 @@ CF_EXTERN_C_BEGIN
 
 NS_ASSUME_NONNULL_BEGIN
 
-#pragma mark - Enum ImageType
+#pragma mark - Enum ResultImageType
 
-typedef GPB_ENUM(ImageType) {
-  ImageType_Uint8 = 0,
-  ImageType_Uint16 = 1,
-  ImageType_Float32 = 2,
-  ImageType_Rgb = 3,
-  ImageType_Rgba = 4,
+typedef GPB_ENUM(ResultImageType) {
+  ResultImageType_Uint8 = 0,
+  ResultImageType_Uint16 = 1,
+  ResultImageType_Float32 = 2,
+  ResultImageType_Rgb = 3,
+  ResultImageType_Rgba = 4,
 };
 
-GPBEnumDescriptor *ImageType_EnumDescriptor(void);
+GPBEnumDescriptor *ResultImageType_EnumDescriptor(void);
 
 /**
  * Checks to see if the given value is defined by the enum or was not known at
  * the time this source was generated.
  **/
-BOOL ImageType_IsValidValue(int32_t value);
+BOOL ResultImageType_IsValidValue(int32_t value);
 
 #pragma mark - MammogramResultRoot
 
@@ -87,7 +87,7 @@ typedef GPB_ENUM(MammogramResult_FieldNumber) {
 @property(nonatomic, readwrite) float score;
 
 @property(nonatomic, readwrite) BOOL hasScore;
-@property(nonatomic, readwrite) ImageType imtype;
+@property(nonatomic, readwrite) ResultImageType imtype;
 
 @property(nonatomic, readwrite) BOOL hasImtype;
 @end

@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-enum ImageType {
+enum ResultImageType {
     UINT8 = 0;
     UINT16 = 1;
     FLOAT32 = 2;
@@ -13,5 +13,5 @@ message MammogramResult {
     required int32 width = 2;
     required int32 height = 3;
 	required float score = 4;
-    required ImageType imtype = 5;
+    required ResultImageType imtype = 5;
 }

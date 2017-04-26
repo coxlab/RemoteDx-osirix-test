@@ -42,26 +42,26 @@ static GPBFileDescriptor *MammogramResultRoot_FileDescriptor(void) {
   return descriptor;
 }
 
-#pragma mark - Enum ImageType
+#pragma mark - Enum ResultImageType
 
-GPBEnumDescriptor *ImageType_EnumDescriptor(void) {
+GPBEnumDescriptor *ResultImageType_EnumDescriptor(void) {
   static GPBEnumDescriptor *descriptor = NULL;
   if (!descriptor) {
     static const char *valueNames =
         "Uint8\000Uint16\000Float32\000Rgb\000Rgba\000";
     static const int32_t values[] = {
-        ImageType_Uint8,
-        ImageType_Uint16,
-        ImageType_Float32,
-        ImageType_Rgb,
-        ImageType_Rgba,
+        ResultImageType_Uint8,
+        ResultImageType_Uint16,
+        ResultImageType_Float32,
+        ResultImageType_Rgb,
+        ResultImageType_Rgba,
     };
     GPBEnumDescriptor *worker =
-        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(ImageType)
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(ResultImageType)
                                        valueNames:valueNames
                                            values:values
                                             count:(uint32_t)(sizeof(values) / sizeof(int32_t))
-                                     enumVerifier:ImageType_IsValidValue];
+                                     enumVerifier:ResultImageType_IsValidValue];
     if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
       [worker release];
     }
@@ -69,13 +69,13 @@ GPBEnumDescriptor *ImageType_EnumDescriptor(void) {
   return descriptor;
 }
 
-BOOL ImageType_IsValidValue(int32_t value__) {
+BOOL ResultImageType_IsValidValue(int32_t value__) {
   switch (value__) {
-    case ImageType_Uint8:
-    case ImageType_Uint16:
-    case ImageType_Float32:
-    case ImageType_Rgb:
-    case ImageType_Rgba:
+    case ResultImageType_Uint8:
+    case ResultImageType_Uint16:
+    case ResultImageType_Float32:
+    case ResultImageType_Rgb:
+    case ResultImageType_Rgba:
       return YES;
     default:
       return NO;
@@ -97,7 +97,7 @@ typedef struct MammogramResult__storage_ {
   int32_t width;
   int32_t height;
   float score;
-  ImageType imtype;
+  ResultImageType imtype;
   NSString *imageId;
 } MammogramResult__storage_;
 
@@ -145,7 +145,7 @@ typedef struct MammogramResult__storage_ {
       },
       {
         .name = "imtype",
-        .dataTypeSpecific.enumDescFunc = ImageType_EnumDescriptor,
+        .dataTypeSpecific.enumDescFunc = ResultImageType_EnumDescriptor,
         .number = MammogramResult_FieldNumber_Imtype,
         .hasIndex = 4,
         .offset = (uint32_t)offsetof(MammogramResult__storage_, imtype),
