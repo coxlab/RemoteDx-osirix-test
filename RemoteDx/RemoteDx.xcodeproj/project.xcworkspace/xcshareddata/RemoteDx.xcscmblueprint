@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6A97CF0F1939A273EEF761DFE2D2336F03BF13BB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6A97CF0F1939A273EEF761DFE2D2336F03BF13BB" : 9223372036854775807,
+    "8F4DB4C47500790E3ABB23F9FF71196DF50C6B0E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E8999A08-79AA-4BC0-97A7-B26D0353E7FE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6A97CF0F1939A273EEF761DFE2D2336F03BF13BB" : "osirix-plugins\/",
+    "8F4DB4C47500790E3ABB23F9FF71196DF50C6B0E" : "osirix\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RemoteDx",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RemoteDx\/RemoteDx.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:coxlab\/osirix-plugins.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6A97CF0F1939A273EEF761DFE2D2336F03BF13BB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pixmeo\/osirix.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8F4DB4C47500790E3ABB23F9FF71196DF50C6B0E"
+    }
+  ]
+}

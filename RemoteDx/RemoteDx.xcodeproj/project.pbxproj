@@ -74,6 +74,8 @@
 		5C851BB21E5BB3060098FB7C /* GPBWellKnownTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C851B721E5BB3060098FB7C /* GPBWellKnownTypes.m */; };
 		5C851BB31E5BB3060098FB7C /* GPBWireFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C851B731E5BB3060098FB7C /* GPBWireFormat.h */; };
 		5C851BB41E5BB3060098FB7C /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C851B741E5BB3060098FB7C /* GPBWireFormat.m */; };
+		5C89046D1F65852400CA8C6B /* ResultWinowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C89046C1F65852400CA8C6B /* ResultWinowController.m */; };
+		5C8904701F6585B800CA8C6B /* ResultWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C89046F1F6585B800CA8C6B /* ResultWindow.xib */; };
 		84A75E0816DDF86800DBF99A /* OsiriXAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A75E0716DDF86800DBF99A /* OsiriXAPI.framework */; };
 		8D5B49AE048680CD000E48DA /* RemoteDx_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF630370AF2F00C91783 /* RemoteDx_Prefix.pch */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
@@ -168,6 +170,9 @@
 		5C851B721E5BB3060098FB7C /* GPBWellKnownTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBWellKnownTypes.m; sourceTree = "<group>"; };
 		5C851B731E5BB3060098FB7C /* GPBWireFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBWireFormat.h; sourceTree = "<group>"; };
 		5C851B741E5BB3060098FB7C /* GPBWireFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBWireFormat.m; sourceTree = "<group>"; };
+		5C89046C1F65852400CA8C6B /* ResultWinowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultWinowController.m; sourceTree = "<group>"; };
+		5C89046E1F65853F00CA8C6B /* ResultWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultWindowController.h; sourceTree = "<group>"; };
+		5C89046F1F6585B800CA8C6B /* ResultWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultWindow.xib; sourceTree = "<group>"; };
 		84A75E0716DDF86800DBF99A /* OsiriXAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OsiriXAPI.framework; path = ../../osirix/build/Development/OsiriXAPI.framework; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB01B9BC067FAC0500CDDB0F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
@@ -219,6 +224,7 @@
 			children = (
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+				5C89046F1F6585B800CA8C6B /* ResultWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -227,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				AB2C26750677B0C400A08910 /* RemoteAnalysisFilter */,
+				5C89046E1F65853F00CA8C6B /* ResultWindowController.h */,
+				5C89046C1F65852400CA8C6B /* ResultWinowController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -480,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				5C8904701F6585B800CA8C6B /* ResultWindow.xib in Resources */,
 				5C6CF9821E5B9CA100659211 /* mammogram_header.proto in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +534,7 @@
 				5C851B771E5BB3060098FB7C /* Any.pbobjc.m in Sources */,
 				5C851B871E5BB3060098FB7C /* Type.pbobjc.m in Sources */,
 				5C851BB41E5BB3060098FB7C /* GPBWireFormat.m in Sources */,
+				5C89046D1F65852400CA8C6B /* ResultWinowController.m in Sources */,
 				5C851B791E5BB3060098FB7C /* Api.pbobjc.m in Sources */,
 				5C851B8B1E5BB3060098FB7C /* GPBArray.m in Sources */,
 			);

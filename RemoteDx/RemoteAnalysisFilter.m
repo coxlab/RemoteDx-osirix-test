@@ -7,7 +7,7 @@
 //
 
 #import "RemoteAnalysisFilter.h"
-
+#import "ResultWindowController.h"
 #import <zmq.h>
 
 #import "MammogramHeader.pbobjc.h"
@@ -24,7 +24,15 @@
     // Set up a 0mq socket
     void *context = zmq_ctx_new();
     void *requester = zmq_socket (context, ZMQ_REQ);
+    
+    int t = 1000;
+    zmq_setsockopt(requester, ZMQ_RCVTIMEO, &t, sizeof(t));
+    
     zmq_connect (requester, "tcp://localhost:5555");
+    
+    // return buffer
+#define BUFFERSIZE  500000
+    char buffer [BUFFERSIZE];
     
 	// Display a waiting window
 	id waitWindow = [viewerController startWaitWindow:@"Analyzing..."];
@@ -87,10 +95,10 @@
             // todo: check err
             
             // receive a message back from the server
-            char buffer [10];
-            zmq_recv (requester, buffer, 10, 0);
+//            zmq_recv (requester, buffer, 10, 0);
+            zmq_recv (requester, buffer, BUFFERSIZE, 0);
             NSLog(@"Received Response\n");
-
+            
         }
 	}
 	
@@ -100,7 +108,14 @@
     
 	// Close the waiting window
 	[viewerController endWaitWindow: waitWindow];
-		
+    
+    // Display a nice window to thanks the user for using our powerful filter!
+    ResultWindowController* resultWin = [[ResultWindowController alloc] init];
+    [resultWin showWindow:self];
+    
+    NSString *htmlContent = [[NSString alloc] initWithCString:buffer encoding:NSUTF8StringEncoding];
+    [resultWin loadContent:htmlContent];
+    
 	return 0;   // No Errors
 }
 
